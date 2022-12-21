@@ -50,12 +50,15 @@ def main():
     print("{:.6f}".format(TT[10]))
 
     #折れ線グラフで表示
-    plt.plot(TT)
+    plt.plot(TT,label="t={:.4f}".format(TIM))
 
     #解を置き換え、現在時刻とする
     for i in range(1,10):
       T[i] = TT[i]
 
+  #表題
+  plt.legend()
+  plt.title("Explicit method  (r={:.2f})".format(R))
   plt.show()
 
 if __name__ == "__main__":
