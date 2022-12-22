@@ -59,6 +59,8 @@ def main():
   #表題
   plt.legend()
   plt.title("Explicit method  (r={:.2f})".format(R))
+  plt.xlabel('lattice point')
+  plt.ylabel('τ')
   plt.show()
 
 if __name__ == "__main__":
