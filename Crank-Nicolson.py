@@ -51,7 +51,6 @@ def	crank_nicolson():
         #反復条件の設定
         MAXEPS = 0.01
         k = 0
-        L = 0
         while MAXEPS > 0.001:
             k = k + 1
 
@@ -82,9 +81,6 @@ def	crank_nicolson():
 			#近似値の計算
             for i in range(11):
                 TK[i] = T[i]
-
-        L = L + k + 3
-        k = 0
 
         # 折れ線グラフで表示
         plt.plot(T, label="t={:.4f}".format(TIM))
