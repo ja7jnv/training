@@ -119,4 +119,5 @@ ani = animation.FuncAnimation(fig, update, frames=num_frames, interval=100, blit
 fig.canvas.mpl_connect('key_press_event', toggle_animation)
 
 # アニメーションの表示
+ani.save('anim.mp4', writer="ffmpeg")
 plt.show()
